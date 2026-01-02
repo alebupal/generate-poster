@@ -1,6 +1,6 @@
 {
   "name": "generate-poster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web app para generar posters ajustando imágenes dentro de covers",
   "main": "server/index.js",
   "scripts": {
@@ -17,4 +17,3 @@
     "concurrently": "^8.2.2"
   }
 }
-

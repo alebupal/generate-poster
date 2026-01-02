@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CoverManagement from './components/CoverManagement'
 import PosterGenerator from './components/PosterGenerator'
 import './App.css'
+import pkg from '../package.json'
 
 function App() {
   const [activeTab, setActiveTab] = useState('covers')
@@ -29,6 +30,9 @@ function App() {
         {activeTab === 'covers' && <CoverManagement />}
         {activeTab === 'generator' && <PosterGenerator />}
       </main>
+      <footer className="app-footer">
+        <p>v{pkg.version}</p>
+      </footer>
     </div>
   )
 }

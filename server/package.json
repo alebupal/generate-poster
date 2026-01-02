@@ -1,6 +1,6 @@
 {
   "name": "generate-poster-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Backend para generate-poster",
   "main": "index.js",
   "scripts": {
@@ -19,4 +19,3 @@
     "nodemon": "^3.0.1"
   }
 }
-

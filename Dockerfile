@@ -14,6 +14,9 @@ FROM node:18-alpine
 
 WORKDIR /app
 
+# Instalar herramientas de compilación necesarias para dependencias nativas (sqlite3, sharp)
+RUN apk add --no-cache python3 make g++
+
 # Instalar dependencias del servidor
 COPY server/package*.json ./
 RUN npm install --production

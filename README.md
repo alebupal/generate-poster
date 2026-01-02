@@ -38,7 +38,21 @@ npm run dev
 
 El servidor estará en `http://localhost:3001` y el cliente en `http://localhost:3000`
 
-### Docker
+### Docker (CLI)
+
+También puedes usar la imagen directamente:
+
+```bash
+docker create \
+  --name=generate-poster \
+  -v /ruta/a/data/database.sqlite:/app/database.sqlite \
+  -v /ruta/a/uploads:/app/uploads \
+  -p 3001:3001 \
+  -e TZ=Europe/Madrid \
+  alebupal/generate-poster:latest
+```
+
+### Docker Compose
 
 1. Construir y ejecutar:
 ```bash
