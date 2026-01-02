@@ -10,12 +10,12 @@ COPY client/ ./
 RUN npm run build
 
 # Production stage
-FROM node:18-alpine
+FROM node:18-slim
 
 WORKDIR /app
 
-# Instalar herramientas de compilación necesarias para dependencias nativas (sqlite3, sharp)
-RUN apk add --no-cache python3 make g++
+# Instalar dependencias para compilación si fallan los prebuilds (opcional pero recomendado para sharp/sqlite3 en algunos entornos)
+RUN apt-get update && apt-get install -y python3 make g++ && rm -rf /var/lib/apt/lists/*
 
 # Instalar dependencias del servidor
 COPY server/package*.json ./
