@@ -31,7 +31,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tvspy:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/generate-poster:latest
         if: github.ref_name == 'main'
 
       - name: Build and push for other branches
@@ -40,5 +40,5 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tvspy:${{ github.ref_name }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tvgenerate-posterspy:${{ github.ref_name }}
         if: github.ref_name != 'main'
